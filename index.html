@@ -142,6 +142,15 @@
     section{padding:56px 0} .hero{padding:76px 0 60px} .card{padding:22px}
     .pub{flex-direction:column;gap:4px} .pub .yr{padding-top:0}
   }
+  /* a wrapped pill must not round into a blob */
+  @media(max-width:560px){
+    .pill{border-radius:12px;align-items:flex-start;line-height:1.5}
+    .dot{margin-top:7px;flex:none}
+    .hero h1{letter-spacing:-1px;word-break:break-word}
+    .stats{grid-template-columns:1fr}
+    .badge{margin-left:0;margin-top:8px}
+    h3{font-size:19px}
+  }
   @media print{
     nav,.links,.hero::before,.hero::after{display:none}
     body{background:#fff;color:#000} .card,.stat{border-color:#ccc;background:#fff}
