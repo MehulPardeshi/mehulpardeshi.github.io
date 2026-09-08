@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mehul Pardeshi — AI Product, Trust &amp; Safety, Governance</title>
+<meta name="description" content="AI product, trust &amp; safety and governance. Shipped a privacy-preserving healthcare LLM to production on Google Play. Four published papers. MS in AI Systems Management, Carnegie Mellon.">
+<meta name="author" content="Mehul Pardeshi">
+<link rel="canonical" href="https://mehulpardeshi.github.io/">
+<meta property="og:title" content="Mehul Pardeshi — AI Product, Trust &amp; Safety, Governance">
+<meta property="og:description" content="Building AI that survives real users — and real scale.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://mehulpardeshi.github.io/">
+<meta property="og:image" content="https://mehulpardeshi.github.io/assets/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#14161B">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%2314161B'/%3E%3Ctext x='50' y='68' font-family='Helvetica,Arial,sans-serif' font-size='52' font-weight='bold' fill='%233FD3D3' text-anchor='middle'%3EM%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#14161B; --bg2:#101216; --surface:#1B1E25; --surface2:#20242D; --line:#2A2F39;
+    --ink:#F2F5F7; --muted:#A8B3BD; --dim:#7C8794;
+    --teal:#3FD3D3; --teal-deep:#008080; --violet:#8E8DE0;
+    --mono:'JetBrains Mono',ui-monospace,SFMono-Regular,Menlo,monospace;
+    --maxw:900px;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth;scroll-padding-top:88px}
+  body{
+    background:var(--bg); color:var(--ink);
+    font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;
+    line-height:1.65; -webkit-font-smoothing:antialiased; text-rendering:optimizeLegibility;
+  }
+  a{color:var(--teal); text-decoration:none}
+  a:hover{text-decoration:underline}
+  ::selection{background:rgba(63,211,211,.28)}
+  :focus-visible{outline:2px solid var(--teal);outline-offset:3px;border-radius:4px}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 26px}
+  .skip{position:absolute;left:-9999px}
+  .skip:focus{left:26px;top:14px;z-index:99;background:var(--teal);color:#08222a;padding:8px 14px;border-radius:8px;font-weight:600}
+
+  /* nav */
+  nav{position:sticky;top:0;z-index:50;backdrop-filter:saturate(150%) blur(14px);
+      background:rgba(20,22,27,.72);border-bottom:1px solid transparent;transition:border-color .25s,background .25s}
+  nav.stuck{border-bottom-color:var(--line);background:rgba(16,18,22,.9)}
+  nav .wrap{display:flex;align-items:center;justify-content:space-between;height:62px;gap:18px}
+  .brand{font-weight:700;letter-spacing:-.3px;color:var(--ink);font-size:15.5px;white-space:nowrap}
+  .brand:hover{text-decoration:none;color:var(--teal)}
+  .brand i{display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--teal);margin-right:9px;vertical-align:middle}
+  .navlinks{display:flex;gap:22px;align-items:center}
+  .navlinks a{color:var(--muted);font-size:13.5px;font-weight:500}
+  .navlinks a:hover{color:var(--teal);text-decoration:none}
+  .navlinks a.cv{color:var(--ink);border:1px solid var(--line);padding:6px 13px;border-radius:7px}
+  .navlinks a.cv:hover{border-color:var(--teal);color:var(--teal)}
+  @media(max-width:680px){ .navlinks a:not(.cv){display:none} }
+
+  section{padding:76px 0;border-top:1px solid var(--line);position:relative}
+  h2{font-size:12.5px;font-weight:700;letter-spacing:2.6px;text-transform:uppercase;color:var(--teal);
+     margin-bottom:30px;display:flex;align-items:center;gap:12px}
+  h2::before{content:attr(data-n);font-family:var(--mono);color:var(--dim);font-size:12px;letter-spacing:0}
+  h2::after{content:"";flex:1;height:1px;background:linear-gradient(90deg,var(--line),transparent)}
+  h3{font-size:20.5px;font-weight:700;letter-spacing:-.3px}
+  p{color:var(--muted)}
+  strong{color:var(--ink);font-weight:600}
+
+  /* hero */
+  .hero{position:relative;padding:104px 0 84px;border-top:none;overflow:hidden}
+  .hero::before{content:"";position:absolute;inset:0;z-index:0;
+    background:
+      radial-gradient(940px 560px at 82% -8%, rgba(0,150,150,.30), transparent 62%),
+      radial-gradient(720px 540px at 108% 92%, rgba(112,111,211,.22), transparent 58%);}
+  .hero::after{content:"";position:absolute;inset:0;z-index:0;opacity:.55;
+    background-image:radial-gradient(rgba(255,255,255,.035) 1px, transparent 1px);background-size:26px 26px;
+    mask-image:linear-gradient(180deg,#000,transparent 82%)}
+  .hero .wrap{position:relative;z-index:1}
+  .pill{display:inline-flex;align-items:center;gap:9px;font-size:12.5px;font-weight:600;color:var(--muted);
+        background:rgba(63,211,211,.07);border:1px solid rgba(63,211,211,.28);border-radius:999px;padding:6px 14px}
+  .dot{width:7px;height:7px;border-radius:50%;background:var(--teal);box-shadow:0 0 0 0 rgba(63,211,211,.6);animation:pulse 2.4s infinite}
+  @keyframes pulse{70%{box-shadow:0 0 0 8px rgba(63,211,211,0)}100%{box-shadow:0 0 0 0 rgba(63,211,211,0)}}
+  .kicker{color:var(--teal);font-size:12.5px;font-weight:700;letter-spacing:3px;text-transform:uppercase;margin-top:26px}
+  .hero h1{font-size:clamp(35px,6.4vw,56px);font-weight:800;line-height:1.06;letter-spacing:-1.6px;margin:15px 0 20px}
+  .hero h1 span{background:linear-gradient(96deg,var(--teal),var(--violet));-webkit-background-clip:text;background-clip:text;color:transparent}
+  .lede{font-size:18px;max-width:62ch}
+  .links{display:flex;flex-wrap:wrap;gap:10px;margin-top:30px}
+  .btn{display:inline-flex;align-items:center;gap:8px;padding:10px 17px;border:1px solid var(--line);border-radius:9px;
+       background:var(--surface);color:var(--ink);font-size:14px;font-weight:500;transition:.16s ease}
+  .btn:hover{border-color:var(--teal);color:var(--teal);text-decoration:none;transform:translateY(-1px)}
+  .btn.primary{background:var(--teal-deep);border-color:var(--teal-deep);color:#fff}
+  .btn.primary:hover{background:var(--teal);border-color:var(--teal);color:#08222a}
+  .btn svg{width:15px;height:15px;flex:none}
+
+  /* cards */
+  .card{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:28px;margin-bottom:18px;
+        transition:border-color .2s,transform .2s}
+  .card:hover{border-color:#39404D;transform:translateY(-2px)}
+  .card.feature{border-color:rgba(63,211,211,.34);
+    background:linear-gradient(180deg,rgba(63,211,211,.05),transparent 42%),var(--surface)}
+  .card.feature:hover{border-color:rgba(63,211,211,.6)}
+  .row{display:flex;justify-content:space-between;align-items:baseline;gap:16px;flex-wrap:wrap}
+  .meta{color:var(--dim);font-size:13px;font-family:var(--mono);white-space:nowrap}
+  .role{color:var(--violet);font-size:14px;font-weight:600;margin-top:3px}
+  .card p{margin-top:13px;font-size:15.5px}
+  .tags{display:flex;flex-wrap:wrap;gap:7px;margin-top:18px}
+  .tag{font-size:12px;color:var(--muted);background:#232833;border:1px solid var(--line);border-radius:999px;padding:4px 11px}
+  .stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(146px,1fr));gap:14px;margin-top:22px}
+  .stat{background:var(--surface2);border:1px solid var(--line);border-radius:11px;padding:15px 16px}
+  .stat b{display:block;color:var(--teal);font-size:22px;font-weight:800;letter-spacing:-.5px;line-height:1.2}
+  .stat span{font-size:12.5px;color:var(--dim);display:block;margin-top:2px}
+  .badge{display:inline-flex;align-items:center;gap:5px;font-size:11px;font-weight:700;letter-spacing:.9px;text-transform:uppercase;
+         color:#08222a;background:var(--teal);border-radius:5px;padding:3px 9px;vertical-align:middle;margin-left:9px}
+
+  /* publications */
+  .pub{padding:17px 0;border-bottom:1px solid var(--line);display:flex;gap:16px;align-items:flex-start}
+  .pub:last-child{border-bottom:none}
+  .pub .yr{font-family:var(--mono);color:var(--dim);font-size:12.5px;padding-top:3px;min-width:38px}
+  .pub .t{font-weight:600;font-size:15.5px;color:var(--ink);display:block;line-height:1.45}
+  .pub a.t:hover{color:var(--teal)}
+  .pub .v{color:var(--dim);font-size:13.5px;margin-top:4px}
+  .pub .v em{font-style:normal;color:var(--muted)}
+
+  ul.plain{list-style:none}
+  ul.plain li{color:var(--muted);font-size:15.5px;padding:11px 0;border-bottom:1px solid var(--line)}
+  ul.plain li:last-child{border-bottom:none}
+  ul.plain b{color:var(--ink);font-weight:600}
+
+  .now p{font-size:16.5px;max-width:66ch}
+  footer{padding:46px 0 70px;border-top:1px solid var(--line);color:var(--dim);font-size:13.5px}
+  footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;align-items:center}
+  footer a{color:var(--dim)} footer a:hover{color:var(--teal)}
+
+  /* reveal */
+  .rv{opacity:0;transform:translateY(14px);transition:opacity .55s ease,transform .55s ease}
+  .rv.in{opacity:1;transform:none}
+  @media(prefers-reduced-motion:reduce){
+    html{scroll-behavior:auto} .rv{opacity:1;transform:none;transition:none} .dot{animation:none}
+  }
+  @media(max-width:600px){
+    section{padding:56px 0} .hero{padding:76px 0 60px} .card{padding:22px}
+    .pub{flex-direction:column;gap:4px} .pub .yr{padding-top:0}
+  }
+  @media print{
+    nav,.links,.hero::before,.hero::after{display:none}
+    body{background:#fff;color:#000} .card,.stat{border-color:#ccc;background:#fff}
+    p,.meta,.stat span{color:#333} a{color:#000}
+  }
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<nav id="nav">
+  <div class="wrap">
+    <a class="brand" href="#top"><i></i>Mehul Pardeshi</a>
+    <div class="navlinks">
+      <a href="#shipped">Shipped</a>
+      <a href="#research">Research</a>
+      <a href="#ventures">Ventures</a>
+      <a href="#now">Now</a>
+      <a class="cv" href="assets/Mehul_Pardeshi_Resume.pdf" target="_blank" rel="noopener">Résumé</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="wrap">
+    <span class="pill"><span class="dot"></span> Seeking Summer 2027 internship — AI product, responsible AI, trust &amp; safety</span>
+    <div class="kicker">AI Product &middot; Trust &amp; Safety &middot; Governance</div>
+    <h1>Building AI that survives<br><span>real users — and real scale.</span></h1>
+    <p class="lede">I build AI products and care most about the part that breaks after the demo — the privacy leak, the confident wrong answer, the moderation call no one can explain. Currently an MS candidate in Artificial Intelligence Systems Management at Carnegie Mellon, Heinz College.</p>
+    <div class="links">
+      <a class="btn primary" href="assets/Mehul_Pardeshi_Resume.pdf" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+        Download résumé
+      </a>
+      <a class="btn" href="mailto:mehulpardeshi8@gmail.com">Get in touch</a>
+      <a class="btn" href="https://www.linkedin.com/in/mehul-pardeshi" target="_blank" rel="noopener">LinkedIn</a>
+      <a class="btn" href="https://play.google.com/store/apps/details?id=com.rudhiraksh.rudhirakshapp" target="_blank" rel="noopener">Rudhiraksh on Google Play</a>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+<section id="shipped">
+  <div class="wrap rv">
+    <h2 data-n="01">Shipped</h2>
+    <div class="card feature">
+      <div class="row">
+        <div>
+          <h3>Rudhiraksh <span class="badge">Live on Google Play</span></h3>
+          <div class="role">Privacy-preserving healthcare LLM architecture (FCH)</div>
+        </div>
+        <div class="meta">2025 — 2026</div>
+      </div>
+      <p>Large language models over patient records invent clinical values and leak protected health information — unacceptable in a clinical setting. I designed a <strong>fact-curated architecture</strong>: a deterministic layer computes every clinical fact under role- and tenant-scoped access control, and the model is only ever asked to phrase the result in plain language.</p>
+      <p>It runs inside a live multi-tenant blood-bank platform serving thalassemia patients, their doctors, and the blood banks that manage their care — and it is shipped on Google Play.</p>
+      <div class="stats">
+        <div class="stat"><b>~55%</b><span>smaller per-patient prompt</span></div>
+        <div class="stat"><b>23 of 24</b><span>identifying fields removed</span></div>
+        <div class="stat"><b>0</b><span>loss in answer accuracy</span></div>
+      </div>
+      <div class="tags"><span class="tag">LLM systems design</span><span class="tag">Access control</span><span class="tag">PHI / privacy</span><span class="tag">Healthcare AI</span><span class="tag">Graceful degradation</span></div>
+      <p style="margin-top:20px">
+        <a href="https://play.google.com/store/apps/details?id=com.rudhiraksh.rudhirakshapp" target="_blank" rel="noopener">View on Google Play →</a>
+        &nbsp;&nbsp;<a href="https://ijcrt.org/viewfull.php?&amp;p_id=IJCRT2606435" target="_blank" rel="noopener">Read the paper →</a>
+      </p>
+    </div>
+  </div>
+</section>
+
+<section id="research">
+  <div class="wrap rv">
+    <h2 data-n="02">Writing &amp; Research</h2>
+    <div class="pub">
+      <div class="yr">2026</div>
+      <div>
+        <a class="t" href="https://ijcrt.org/viewfull.php?&amp;p_id=IJCRT2606435" target="_blank" rel="noopener">FCH: A Fact-Curated Context Architecture for Reliable and Privacy-Preserving Healthcare LLM Systems</a>
+        <div class="v"><em>International Journal of Creative Research Thoughts (IJCRT)</em>, Vol. 14 Issue 6, June 2026 &middot; ISSN 2320-2882</div>
+      </div>
+    </div>
+    <div class="pub">
+      <div class="yr">2026</div>
+      <div>
+        <a class="t" href="https://dx.doi.org/10.2139/ssrn.5987394" target="_blank" rel="noopener">Validating Community as a Service: A Product Strategy Case Study of Loopin City</a>
+        <div class="v"><em>Social Science Research Network (SSRN)</em> &middot; doi:10.2139/ssrn.5987394</div>
+      </div>
+    </div>
+    <div class="pub">
+      <div class="yr">2025</div>
+      <div>
+        <a class="t" href="https://doi.org/10.22214/ijraset.2025.75238" target="_blank" rel="noopener">A Research Framework for Modernizing Thalassemia Data Ecosystems under India's Digital Health Mission</a>
+        <div class="v"><em>IJRASET</em> &middot; doi:10.22214/ijraset.2025.75238</div>
+      </div>
+    </div>
+    <div class="pub">
+      <div class="yr">2025</div>
+      <div>
+        <a class="t" href="https://doi.org/10.5281/zenodo.15202861" target="_blank" rel="noopener">Democratizing Content Moderation: A Theoretical Framework for Small Businesses and Startups</a>
+        <div class="v"><em>Zenodo</em> &middot; doi:10.5281/zenodo.15202861</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="ventures">
+  <div class="wrap rv">
+    <h2 data-n="03">Ventures</h2>
+
+    <div class="card">
+      <div class="row">
+        <div><h3>Loopin</h3><div class="role">Founder &amp; Product Lead</div></div>
+        <div class="meta">Jun — Dec 2025</div>
+      </div>
+      <p>Event discovery for local tech communities was scattered across private groups, leaving newcomers with no way in. I founded an open-source discovery platform and led a cross-functional team of eight from product strategy through public launch — deliberately scoping out ticketing, sign-in and data capture to protect community trust.</p>
+      <div class="stats">
+        <div class="stat"><b>#38</b><span>Product of the Day, Product Hunt</span></div>
+        <div class="stat"><b>Top 60</b><span>selection + booth, IndiaFOSS 2025</span></div>
+        <div class="stat"><b>5</b><span>tech communities onboarded</span></div>
+      </div>
+      <div class="tags"><span class="tag">Product strategy</span><span class="tag">Open source</span><span class="tag">Community platforms</span><span class="tag">Go-to-market</span></div>
+    </div>
+
+    <div class="card">
+      <div class="row">
+        <div><h3>MaverickAI</h3><div class="role">Founder &amp; Product Lead</div></div>
+        <div class="meta">Oct 2024 — Sep 2025</div>
+      </div>
+      <p>Blunt automated blocking silences legitimate users, and small teams can't afford moderation tooling. I founded an open-source AI content-moderation tool and led 5–8 contributors, defining the product around the trade-offs that actually decide AI safety: false positives versus safety, automation versus human oversight, and explainability.</p>
+      <p>The human-override and escalation paths — letting moderators reverse a model decision — are what made it defensible. Selected for Kumbhathon incubation and published as a governance framework.</p>
+      <div class="tags"><span class="tag">Trust &amp; safety</span><span class="tag">Content moderation</span><span class="tag">Human-in-the-loop</span><span class="tag">AI governance</span></div>
+    </div>
+
+    <div class="card">
+      <div class="row">
+        <div><h3>MarketPlace</h3><div class="role">Founder &amp; Community Lead</div></div>
+        <div class="meta">Jun 2023 — Jul 2025</div>
+      </div>
+      <p>Students had no trusted channel to exchange books and materials on campus. I built and grew a peer-to-peer marketplace community to roughly 900 members during my first year of engineering, set the moderation and trust norms that held as it scaled, then handed it to a successor team so it would outlive my graduation.</p>
+      <div class="tags"><span class="tag">Two-sided platforms</span><span class="tag">Trust &amp; incentives</span><span class="tag">Community</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="speaking">
+  <div class="wrap rv">
+    <h2 data-n="04">Speaking &amp; Recognition</h2>
+    <ul class="plain">
+      <li><b>University keynote</b> — "Building AI Agents: From Theory to Implementation," Sandip University</li>
+      <li><b>8+ talks</b> delivered, including a 200-person technical session; organized or judged 15+ community events</li>
+      <li><b>President (2025) &amp; Vice President (2024)</b>, SAIGE — Society of AI &amp; GenAI, PVGCOE</li>
+      <li><b>Co-Organizer</b>, FOSS United (Nashik Chapter) &middot; <b>AI/ML Lead</b>, Google Developer Groups on Campus</li>
+      <li><b>Entrepreneurship Excellence Award</b> — Ecosystem Enabler, ENSIN Forum (2025)</li>
+      <li><b>1st place</b>, TechFest 2024 Hackathon — Sandip University &times; Winjit Technologies</li>
+    </ul>
+  </div>
+</section>
+
+<section id="now" class="now">
+  <div class="wrap rv">
+    <h2 data-n="05">Now</h2>
+    <p>I'm at Carnegie Mellon's Heinz College doing an MS in Artificial Intelligence Systems Management (Aug 2026 – Dec 2027), focused on how organisations actually operationalise AI responsibly — evaluation, red-teaming, human oversight and governance.</p>
+    <p style="margin-top:14px">I'm looking for a <strong>Summer 2027 internship</strong> in AI product, responsible AI, trust &amp; safety, or AI risk. If that's your team, I'd like to hear from you.</p>
+    <div class="links">
+      <a class="btn primary" href="mailto:mehulpardeshi8@gmail.com">mehulpardeshi8@gmail.com</a>
+      <a class="btn" href="assets/Mehul_Pardeshi_Resume.pdf" target="_blank" rel="noopener">Résumé (PDF)</a>
+      <a class="btn" href="https://www.linkedin.com/in/mehul-pardeshi" target="_blank" rel="noopener">linkedin.com/in/mehul-pardeshi</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>&copy; 2026 Mehul Pardeshi &middot; Pittsburgh, PA</span>
+    <span><a href="assets/Mehul_Pardeshi_Resume.pdf" target="_blank" rel="noopener">Résumé</a> &middot; <a href="https://www.linkedin.com/in/mehul-pardeshi" target="_blank" rel="noopener">LinkedIn</a> &middot; <a href="mailto:mehulpardeshi8@gmail.com">Email</a></span>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var nav=document.getElementById('nav');
+  var onScroll=function(){ nav.classList.toggle('stuck', window.scrollY>10); };
+  onScroll(); window.addEventListener('scroll',onScroll,{passive:true});
+
+  var els=document.querySelectorAll('.rv');
+  if(!('IntersectionObserver' in window)){ els.forEach(function(e){e.classList.add('in')}); return; }
+  var io=new IntersectionObserver(function(entries){
+    entries.forEach(function(en){ if(en.isIntersecting){ en.target.classList.add('in'); io.unobserve(en.target); } });
+  },{rootMargin:'0px 0px -8% 0px',threshold:.06});
+  els.forEach(function(e){ io.observe(e); });
+})();
+</script>
+</body>
+</html>
